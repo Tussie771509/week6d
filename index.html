@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Student Expense Dashboard</h1>
+    
+    <!-- File Upload -->
+    <input type="file" id="upload" />
+    
+    <!-- Custom Metrics -->
+    <div id="metrics">
+        <p>Total Expenses: <span id="totalExpenses"></span></p>
+        <p>Average Monthly Income: <span id="avgMonthlyIncome"></span></p>
+        <p>Total Financial Aid Received: <span id="totalFinancialAid"></span></p>
+    </div>
+
+    <!-- Bar Chart: Total expenses by category -->
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <!-- Line Chart: Monthly income vs. total expenses -->
+    <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+    </div>
+
+    <!-- Pie Chart: Expense distribution by category -->
+    <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- Data Table -->
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Year in School</th>
+                <th>Major</th>
+                <th>Monthly Income</th>
+                <th>Financial Aid</th>
+                <th>Tuition</th>
+                <th>Housing</th>
+                <th>Food</th>
+                <th>Transportation</th>
+                <th>Books & Supplies</th>
+                <th>Entertainment</th>
+                <th>Personal Care</th>
+                <th>Technology</th>
+                <th>Health & Wellness</th>
+                <th>Miscellaneous</th>
+                <th>Preferred Payment Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Script to handle data import, cleaning, and visualization -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
